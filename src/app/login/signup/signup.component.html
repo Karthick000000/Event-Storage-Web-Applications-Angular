@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+    	<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>EventRM | Signup  </title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="Farazon">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href='/assets/static/images/others/favicon.png' type="image/png" sizes="16x16">
+	</head>
+	<body class="">
+
+		<div class="app">
+		<div class="container-fluid p-h-0 p-v-20 bg full-height d-flex" style="background-image: url('assets/static/images/signup/sign-up-background.png');min-width: -webkit-fill-available;position:absolute">
+            <div class="d-flex flex-column justify-content-between w-100">
+                <div class="container d-flex h-100">
+                    <div class="row align-items-center w-100">
+
+						<div class="col-lg-5">
+							<div class="card shadow-lg">
+								<div class="card-body">
+									<div class="d-flex align-items-center justify-content-between m-b-40">
+										<span style="text-align: center;color: black;"><h1><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign up</b></h1></span>
+									</div>
+										<form name="form" (ngSubmit)="f.form.valid && signUp()" #f="ngForm" novalidate>
+											<div class="row">
+												<div class="form-group col-md-12">
+													<label for="first_name" class="modal_class ml-2 fw-600 "><i
+															class="uil uil-user mr-2 "></i>Name</label>
+													<input type="text" placeholder="Enter name" class="form-control form-control-lg" name='name' [(ngModel)]="signupModel.name" #name="ngModel" [ngClass]="{ 'is-invalid': f.submitted && name.invalid }" required>
+														<div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
+														  <div *ngIf="name.errors.required">Name is required</div>
+														</div>
+												</div>
+												<div class="form-group col-md-12">
+													<label for="email" class="modal_class ml-2 fw-600"><i
+															class="uil uil-envelope mr-2 fw-600"></i>Email</label>
+													<input type="text" placeholder="Enter email" class="form-control form-control-lg" name='email' [(ngModel)]="signupModel.email" #email="ngModel" [ngClass]="{'is-invalid':f.submitted && email.invalid,'is-invalid-custom': f.submitted && incorrect_email=='true'}" required (keyup)="checkEmail()">
+													<div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+														<div>Email ID is required</div>
+													</div>
+													<div *ngIf="f.submitted && incorrect_email=='true'" class="custom-invalid-feedback">
+														<div>Incorrect email </div>
+													</div>
+												</div>
+												<div class="form-group col-md-12">
+													<label for="password" class="modal_class ml-2 fw-600"><i
+															class="uil uil-padlock mr-2 fw-600"></i>Password</label>
+													<input type="password" placeholder="Enter Password" class="form-control form-control-lg" name='password' [(ngModel)]="signupModel.password" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required>
+														<div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+														  <div *ngIf="password.errors.required">Password is required</div>
+														</div>
+												</div>
+	
+											</div>
+											<div class="form-group">
+												<div class="d-flex align-items-center justify-content-between">
+													<button class="btn btn-secondary btn-rounded btn-block font-size-16 fw-600 font-size-16 fw-600"><span class="font-size-20 fw-600">Sign Up</span></button>
+											   </div>
+											</div>
+											<div class="form-group">
+												<div class="text-center">
+												  <span class="font-size-16 font-weight-bold">Or</span>
+												</div>
+											</div>
+											<div class="form-group">
+												<div class="text-center">
+												  <span class="font-size-15 fw-500">Already have an account?
+													 <a href="javascript:void(0)" (click)="login()" class="text-primary fw-800 width:100% ">Login</a>
+												  </span>
+												</div>
+											</div>
+									</form>
+								</div>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		</div>
+		
+
+		
+	</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Farazon CRM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured CRM" name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+</head>
+<body class=" sidebar-enable {{this.common.right_bar}}" data-layout-mode="horizontal" data-sidebar-color="dark" data-topbar-color="dark">
+    <div id="wrapper">      
+        <div class="navbar navbar-expand flex-column flex-md-row navbar-custom">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand mr-0 mr-md-2 logo"><h1>Hi User , Welcome to this Event Register World </h1>
+                </a>
+                <ul class="navbar-nav flex-row ml-auto d-flex list-unstyled topnav-menu float-right mb-0">
+                    <li class="dropdown d-none d-lg-inline-block">
+                        <a class="nav-link dropdown-toggle arrow-none {{openFullscreenCss}}" (click)="openFullscreen()" data-toggle="fullscreen">
+                            <i-feather name="maximize" class="icon"></i-feather>
+                        </a>
+                    </li>
+                    <li class="dropdown d-lg-block" data-toggle="tooltip" data-placement="left" ngbDropdown>
+                        <a class="nav-link dropdown-toggle mr-0" data-toggle="dropdown" ngbDropdownToggle
+                            href="javascript:void(0)" role="button" aria-haspopup="false" aria-expanded="false">
+                            <img src="{{profile_pic}}" class="avatar-sm rounded-circle mr-2" alt="user">
+                            <span class="dis-sm dis-md fw-500">{{layout_model.name}}</span>
+                            <i-feather name="chevron-down" class="icon"></i-feather>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+                            <a href='javascript:void(0)' class="dropdown-item notify-item" ngbDropdownItem
+                                (click)="logout()">
+                                <i-feather name="log-out" class="icon-dual icon-xs mr-2"></i-feather>
+                                <span class="fw-500">Logout</span>
+                            </a>
+                        </div>
+                    </li>                 
+                </ul>
+            </div>
+        </div>
+        <!-- <header class="site-navbar" role="banner">
+            <nav class="site-navigation position-relative " role="navigation">
+                <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                    <li ><a [routerLink]="['/events']" [routerLinkActive]="['active']"><span class="fw-600 header_li"><i class="uil uil-home-alt icon-dual "></i> Event List</span></a></li>
+                </ul>
+            </nav>
+        </header> -->
+        <br/><br/><br/><br/><br/><br/>
+        <div class="content-page" style="overflow-y: auto !important;height: 100% !important;padding: bottom 20px;margin-left: 0px !important;">
+            <router-outlet></router-outlet>
+            <app-spinner-show></app-spinner-show>
+        </div>
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

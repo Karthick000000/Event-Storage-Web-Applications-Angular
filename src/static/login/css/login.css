@@ -1,0 +1,110 @@
+/*------Sign Up------*/
+.h_85 {
+    height: 85%!important;
+}
+.container-fluid-signup {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.full-height {
+    min-height: 100vh;
+}
+.no-gutters {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.row-signup {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.mt_0 {
+  margin-top: 0px;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.center-or {
+  margin: 0;
+  position: absolute;
+  top: 113%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.center-g {
+  margin: 0;
+  position: absolute;
+  top: 125%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+.center-a {
+  margin: 0;
+  position: absolute;
+  top: 140%;
+  left:70%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width:100%
+}
+.btn_white {
+	border-color: #e2e7f1;
+	color: #212529;
+		
+}
+.btn_white:hover {
+    color: #2196f3;
+    background: 0 0;
+	
+}
+.search_pd{
+
+    margin-right: 20px;
+}
+.btn_three_s {
+    background: #2196f3;
+    padding: 15px;
+    border: 1px solid #2196f3;
+    margin-top: 10px;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    display: inline-block;
+	color:#fff;
+	width:100%;
+	border-radius: 3px;
+}
+.btn_three_s:hover {
+  color: #2196f3;
+  background: transparent;
+}
+.sign_btn_transparent:hover {
+    background: #2196f3;
+    color: #fff;
+}
+.font-weight-semibold_s {
+    font-weight: 600 !important;
+}
+.bg-white {
+    background-color: #fff !important;
+}
+/*----Login-----*/
+.small_l {
+    font-size: 110%;
+    font-weight: 500;
+}
+.btn_w{
+	width:100%;
+}

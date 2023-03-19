@@ -1,0 +1,24 @@
+.btn_three_s {
+    background: #2196f3;
+    padding: 15px;
+    border: 1px solid #2196f3;
+    margin-top: 10px;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    display: inline-block;
+	color:#fff;
+	width:100%;
+	border-radius: 3px;
+}
+.btn_three_s:hover {
+  color: #2196f3;
+  background: transparent;
+}
+
+
+
+
+
+
+

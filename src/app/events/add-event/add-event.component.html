@@ -1,0 +1,30 @@
+<div class="modal-header">
+    <h5 class="modal-title">Add Event</h5>
+    <button type="button" class="close" aria-hidden="true" data-dismiss="modal" (click)="this.common.modalRef.close();">×</button>
+  </div>
+  <div class="modal-body">
+    <form name="form" (ngSubmit)="f.form.valid && addevent()" #f="ngForm" class="modal_form">
+        <div class="row">
+            <div class="form-group col-md-6 mt-2">
+                <label for="event_name" class="modal_class ml-2"><i class="uil uil-slack mr-1"></i>Event Name
+                    </label>
+                <input type="text" placeholder="Enter Event Name" class="form-control form-control-lg"
+                    id="event_name" name='event_name' [(ngModel)]="event_model.event_name" #event_name="ngModel" required>
+            </div>
+            <div class="form-group col-md-6 mt-2">
+                <label for="discription" class="modal_class ml-2"><i class="uil uil-tag mr-1"></i>Discription
+                    </label>
+                <input type="text" placeholder="Enter Discription" class="form-control form-control-lg"
+                    id="discription" name='discription' [(ngModel)]="event_model.discription" #discription="ngModel" required>
+            </div>
+        </div> 
+      <div class="form-group text-right mb-0 mt-2 modal_buttons">
+        <button type="reset" class="btn btn-light close_modal mr-3 width-md" (click)="this.common.modalRef.close();">
+            Cancel
+        </button>
+        <button class="btn btn-primary mr-1 width-md modal_submit">
+            Submit
+        </button>
+    </div>
+  </form>
+  </div>
